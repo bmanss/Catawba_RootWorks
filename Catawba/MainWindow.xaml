@@ -1,0 +1,39 @@
+﻿<Window x:Class="Catawba.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodels="clr-namespace:Catawba.ViewModels"
+        xmlns:views="clr-namespace:Catawba.Views"
+        xmlns:local="clr-namespace:Catawba"
+        mc:Ignorable="d"
+        Title="RootWorks" Height="600" Width="800" >
+    <ContentControl Content="{Binding currentViewModel}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+                <views:LoginPage/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+                <views:HomePageView2/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:AddInfoViewModel}">
+                <views:AddInfoView2/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:ViewInfoViewModel}">
+                <views:ViewInfoView2/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:AddInfoFormViewModel}">
+                <views:AddClientForm/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:SearchClientsViewModel}">
+                <views:SearchClientView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:MngAccsViewModel}">
+                <views:mngAccsPage/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:MngServicesViewModel}">
+                <views:mngServicesPage/>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
+</Window>
